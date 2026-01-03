@@ -5,21 +5,21 @@
 class Gone < Formula
   desc "A fast, concurrent dead link detector for markdown files"
   homepage "https://github.com/leonardomso/gone"
-  version "0.1.0"
+  version "0.1.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/leonardomso/gone/releases/download/v0.1.0/gone_0.1.0_darwin_amd64.tar.gz"
-      sha256 "8208ced50d2dd458c53d9e0af04b65a35d542faf69248ece0d2d2f1337ccf052"
+      url "https://github.com/leonardomso/gone/releases/download/v0.1.5/gone_0.1.5_darwin_amd64.tar.gz"
+      sha256 "4da0ce22adb03fefd37ec9d57e4e1a56a59265821681e27c2fb58079b18a432c"
 
       def install
         bin.install "gone"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/leonardomso/gone/releases/download/v0.1.0/gone_0.1.0_darwin_arm64.tar.gz"
-      sha256 "a3a802fd16cc24ea2092b50e3fe9aef5cae370fc5b09d38eb388d40747fe2d1d"
+      url "https://github.com/leonardomso/gone/releases/download/v0.1.5/gone_0.1.5_darwin_arm64.tar.gz"
+      sha256 "39945c566b3350a4d3c0c907d53ef8b127f0df2ae70046132997bd31cef83c74"
 
       def install
         bin.install "gone"
@@ -29,15 +29,15 @@ class Gone < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/leonardomso/gone/releases/download/v0.1.0/gone_0.1.0_linux_amd64.tar.gz"
-      sha256 "de643500668547b3aa3b313ab6226533256513cd8f9eac910214e1d62d435a34"
+      url "https://github.com/leonardomso/gone/releases/download/v0.1.5/gone_0.1.5_linux_amd64.tar.gz"
+      sha256 "31f876f789782b4faae318e7684629633d3105050760f59852262824b48bcd41"
       def install
         bin.install "gone"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/leonardomso/gone/releases/download/v0.1.0/gone_0.1.0_linux_arm64.tar.gz"
-      sha256 "8af6ff443fdaf4bcc45789040aac56ee88c88abbd0b71a15c960be5873318715"
+      url "https://github.com/leonardomso/gone/releases/download/v0.1.5/gone_0.1.5_linux_arm64.tar.gz"
+      sha256 "74a1d842b6fa62ce612ad6893bc391712405282533fd8eb1e8fb1ea1bf85cf01"
       def install
         bin.install "gone"
       end
