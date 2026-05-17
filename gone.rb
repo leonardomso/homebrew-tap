@@ -5,23 +5,23 @@
 class Gone < Formula
   desc "A fast, concurrent dead link detector for markdown files"
   homepage "https://github.com/leonardomso/gone"
-  version "0.1.5"
+  version "0.1.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/leonardomso/gone/releases/download/v0.1.5/gone_0.1.5_darwin_amd64.tar.gz"
-      sha256 "4da0ce22adb03fefd37ec9d57e4e1a56a59265821681e27c2fb58079b18a432c"
+      url "https://github.com/leonardomso/gone/releases/download/v0.1.6/gone_0.1.6_darwin_amd64.tar.gz"
+      sha256 "7da8c4fbaf62f9971dfe35c391e9755975f9b749238eb91a36f36ef522f7f212"
 
-      def install
+      define_method(:install) do
         bin.install "gone"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/leonardomso/gone/releases/download/v0.1.5/gone_0.1.5_darwin_arm64.tar.gz"
-      sha256 "39945c566b3350a4d3c0c907d53ef8b127f0df2ae70046132997bd31cef83c74"
+      url "https://github.com/leonardomso/gone/releases/download/v0.1.6/gone_0.1.6_darwin_arm64.tar.gz"
+      sha256 "201ba8a19d5fa68d8f9639347bd0800d8831c2ed383ef942db4bf73086e3bdbf"
 
-      def install
+      define_method(:install) do
         bin.install "gone"
       end
     end
@@ -29,16 +29,16 @@ class Gone < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/leonardomso/gone/releases/download/v0.1.5/gone_0.1.5_linux_amd64.tar.gz"
-      sha256 "31f876f789782b4faae318e7684629633d3105050760f59852262824b48bcd41"
-      def install
+      url "https://github.com/leonardomso/gone/releases/download/v0.1.6/gone_0.1.6_linux_amd64.tar.gz"
+      sha256 "944934566ceb16102c4f982fcc87f4a2bbe2a689abc39bbfc3a3d5034f4a8063"
+      define_method(:install) do
         bin.install "gone"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/leonardomso/gone/releases/download/v0.1.5/gone_0.1.5_linux_arm64.tar.gz"
-      sha256 "74a1d842b6fa62ce612ad6893bc391712405282533fd8eb1e8fb1ea1bf85cf01"
-      def install
+      url "https://github.com/leonardomso/gone/releases/download/v0.1.6/gone_0.1.6_linux_arm64.tar.gz"
+      sha256 "4b1d8b1728e12815e37fe79663430f77e21daec4c889dc5ef6f0f616e4c82522"
+      define_method(:install) do
         bin.install "gone"
       end
     end
